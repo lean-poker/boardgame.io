@@ -179,7 +179,11 @@
     "moduleNameMapper": {
       "\\.(css)$": "identity-obj-proxy",
       "\\.(svg)$": "<rootDir>/.empty_module.js",
-      "svelte-json-tree-auto": "<rootDir>/src/client/debug/tests/JSONTree.mock.svelte"
+      "svelte-json-tree-auto": "<rootDir>/src/client/debug/tests/JSONTree.mock.svelte",
+      "^svelte$": "<rootDir>/node_modules/svelte/src/index-client.js",
+      "^svelte/legacy$": "<rootDir>/node_modules/svelte/src/legacy/legacy-client.js",
+      "^svelte/reactivity$": "<rootDir>/node_modules/svelte/src/reactivity/index-client.js",
+      "^svelte/store$": "<rootDir>/node_modules/svelte/src/store/index-client.js"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -199,7 +203,7 @@
       "^.+\\.svelte$": "<rootDir>/jest-svelte-transformer.cjs"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto|esm-env|devalue|zimmerframe)/)"
+      "node_modules/(?!(boardgame.io|flatted|svelte|svelte-json-tree-auto|esm-env|devalue|zimmerframe|@testing-library/(svelte|svelte-core))/)"
     ],
     "testPathIgnorePatterns": [
       "examples/",
