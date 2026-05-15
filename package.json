@@ -141,6 +141,7 @@
     "rollup-plugin-typescript2": "^0.37.0",
     "shelljs": "^0.10.0",
     "supertest": "^7.2.2",
+    "svelte": "^3.59.2",
     "svelte-icons": "^2.1.0",
     "tempy": "^1.0.1",
     "ts-jest": "^29.4.9",
@@ -165,7 +166,6 @@
     "setimmediate": "^1.0.5",
     "socket.io": "^4.8.3",
     "socket.io-client": "^4.8.3",
-    "svelte": "^3.59.2",
     "svelte-json-tree-auto": "^0.1.0",
     "ts-toolbelt": "^9.6.0"
   },
