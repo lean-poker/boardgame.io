@@ -7,10 +7,10 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import { Client as PlainJSClient } from 'boardgame.io/client';
-import { Client } from 'boardgame.io/react';
-import { Local } from 'boardgame.io/multiplayer';
-import { MCTSBot, Step } from 'boardgame.io/ai';
+import { Client as PlainJSClient } from '@lean-poker/boardgame.io/client';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Local } from '@lean-poker/boardgame.io/multiplayer';
+import { MCTSBot, Step } from '@lean-poker/boardgame.io/ai';
 import TicTacToe from './game';
 import Board from './board';
 

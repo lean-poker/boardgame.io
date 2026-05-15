@@ -7,8 +7,8 @@
  */
 
 import React from 'react';
-import { Client } from 'boardgame.io/react';
-import { SocketIO } from 'boardgame.io/multiplayer';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { SocketIO } from '@lean-poker/boardgame.io/multiplayer';
 import TicTacToe from './game';
 import Board from './board';
 import PropTypes from 'prop-types';

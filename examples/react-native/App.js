@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { Client } from 'boardgame.io/react-native';
+import { Client } from '@lean-poker/boardgame.io/react-native';
 import logo from './logo.png';
 
 import TicTacToe from './game';

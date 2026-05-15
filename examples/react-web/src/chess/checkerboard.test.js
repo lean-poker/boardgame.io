@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { Checkerboard } from './checkerboard';
-import { Token } from 'boardgame.io/ui';
+import { Token } from '@lean-poker/boardgame.io/ui';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -25,7 +25,7 @@ test('position', () => {
       <Token square="b5">
         <circle r="0.25" fill="red" />
       </Token>
-    </Checkerboard>
+    </Checkerboard>,
   );
   expect(grid.html()).toContain('translate(1, 3)');
 });
@@ -48,7 +48,7 @@ test('invalid square', () => {
 
 test('colorMap', () => {
   const grid = Enzyme.mount(
-    <Checkerboard highlightedSquares={{ a5: 'blue' }} />
+    <Checkerboard highlightedSquares={{ a5: 'blue' }} />,
   );
   expect(grid.find('rect').at(3).html()).toContain('blue');
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Client } from 'boardgame.io/react';
-import { Debug } from 'boardgame.io/debug';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Debug } from '@lean-poker/boardgame.io/debug';
 
 var TicTacToe = {
   setup: () => ({ cells: Array(9).fill(null) }),

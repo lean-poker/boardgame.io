@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { Client } from 'boardgame.io/react';
+import { Client } from '@lean-poker/boardgame.io/react';
 import TicTacToe from './game';
 import Board from './board';
 

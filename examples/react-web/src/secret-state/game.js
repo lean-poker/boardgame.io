@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-import { PlayerView } from 'boardgame.io/core';
+import { PlayerView } from '@lean-poker/boardgame.io/core';
 
 const SecretState = {
   name: 'secret-state',

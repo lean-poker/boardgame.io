@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-import { Server, Origins } from 'boardgame.io/server';
+import { Server, Origins } from '@lean-poker/boardgame.io/server';
 import TicTacToe from './src/tic-tac-toe/game';
 import Chess from './src/chess/game';
 

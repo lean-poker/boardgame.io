@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-import { PlayerView, ActivePlayers } from 'boardgame.io/core';
+import { PlayerView, ActivePlayers } from '@lean-poker/boardgame.io/core';
 
 const RedactedMoves = {
   name: 'secret-state',

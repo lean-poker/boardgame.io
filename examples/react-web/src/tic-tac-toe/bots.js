@@ -7,9 +7,9 @@
  */
 
 import React from 'react';
-import { Client } from 'boardgame.io/react';
-import { Local } from 'boardgame.io/multiplayer';
-import { MCTSBot } from 'boardgame.io/ai';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Local } from '@lean-poker/boardgame.io/multiplayer';
+import { MCTSBot } from '@lean-poker/boardgame.io/ai';
 import TicTacToe from './game';
 import Board from './board';
 

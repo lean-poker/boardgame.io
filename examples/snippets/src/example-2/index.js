@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Client } from 'boardgame.io/react';
-import { Debug } from 'boardgame.io/debug';
-import { INVALID_MOVE } from 'boardgame.io/core';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Debug } from '@lean-poker/boardgame.io/debug';
+import { INVALID_MOVE } from '@lean-poker/boardgame.io/core';
 
 function IsVictory(cells) {
   const positions = [
@@ -86,7 +86,7 @@ function TicTacToeBoard({ ctx, G, moves }) {
           ) : (
             <button style={cellStyle} onClick={() => onClick(id)} />
           )}
-        </td>
+        </td>,
       );
     }
     tbody.push(<tr key={i}>{cells}</tr>);

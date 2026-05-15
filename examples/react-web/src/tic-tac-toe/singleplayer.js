@@ -7,8 +7,8 @@
  */
 
 import React from 'react';
-import { Client } from 'boardgame.io/react';
-import { Debug } from 'boardgame.io/debug';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Debug } from '@lean-poker/boardgame.io/debug';
 import TicTacToe from './game';
 import Board from './board';
 

@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { Lobby } from 'boardgame.io/react';
+import { Lobby } from '@lean-poker/boardgame.io/react';
 import { default as BoardTicTacToe } from '../tic-tac-toe/board';
 import { default as BoardChess } from '../chess/board';
 import { default as GameTicTacToe } from '../tic-tac-toe/game';

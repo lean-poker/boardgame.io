@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Client } from 'boardgame.io/react';
-import { Local } from 'boardgame.io/multiplayer';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Local } from '@lean-poker/boardgame.io/multiplayer';
 
 function IsVictory(cells) {
   const positions = [
@@ -102,7 +102,7 @@ function TicTacToeBoard({ G, ctx, moves, isActive, playerID }) {
           ) : (
             <div style={cellStyle(false)}>{G.cells[id]}</div>
           )}
-        </td>
+        </td>,
       );
     }
     tbody.push(<tr key={i}>{cells}</tr>);

@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { ActivePlayers } from 'boardgame.io/core';
+import { ActivePlayers } from '@lean-poker/boardgame.io/core';
 
 const code = `{
   turn: { activePlayers: ActivePlayers.ALL_ONCE },

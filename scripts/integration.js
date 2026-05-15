@@ -1,8 +1,8 @@
 const shell = require('shelljs');
 
 shell.rm('-rf', 'dist');
-shell.exec('npm pack');
-const packed = shell.ls('./boardgame.io-*.tgz').stdout.trim();
+const packResult = shell.exec('npm pack --silent', { silent: true });
+const packed = packResult.stdout.trim().split('\n').pop();
 
 shell.mv(packed, 'integration');
 shell.cd('integration');

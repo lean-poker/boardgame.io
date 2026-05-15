@@ -1,8 +1,8 @@
 <script>
   export let playerID;
 
-  import { Client } from 'boardgame.io/client';
-  import { Local } from 'boardgame.io/multiplayer';
+  import { Client } from '@lean-poker/boardgame.io/client';
+  import { Local } from '@lean-poker/boardgame.io/multiplayer';
   import Game from './game';
 
   const client = Client({
