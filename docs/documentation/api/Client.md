@@ -10,7 +10,7 @@ the client application.
 #### Import
 
 ```js
-import { Client } from 'boardgame.io/client';
+import { Client } from '@lean-poker/boardgame.io/client';
 ```
 
 ### Creating a client
@@ -33,7 +33,7 @@ const client = Client({
   //   Implementation that talks to a remote server using socket.io.
   //
   //   How to import:
-  //     import { SocketIO } from 'boardgame.io/multiplayer'
+  //     import { SocketIO } from '@lean-poker/boardgame.io/multiplayer'
   //
   //   Arguments:
   //     Object with 2 parameters
@@ -47,7 +47,7 @@ const client = Client({
   //   connect to a server.
   //
   //   How to import:
-  //     import { Local } from 'boardgame.io/multiplayer'
+  //     import { Local } from '@lean-poker/boardgame.io/multiplayer'
   //
   // Additionally, you can write your own transport implementation.
   // See `src/client/client.js` for details.
@@ -211,7 +211,7 @@ The following methods are available on a client instance:
 #### Import
 
 ```js
-import { Client } from 'boardgame.io/react';
+import { Client } from '@lean-poker/boardgame.io/react';
 ```
 
 #### Arguments
@@ -264,7 +264,7 @@ const App = Client({
   //   Implementation that talks to a remote server using socket.io.
   //
   //   How to import:
-  //     import { SocketIO } from 'boardgame.io/multiplayer'
+  //     import { SocketIO } from '@lean-poker/boardgame.io/multiplayer'
   //
   //   Arguments:
   //     Object with 2 parameters
@@ -278,7 +278,7 @@ const App = Client({
   //   connect to a server.
   //
   //   How to import:
-  //     import { Local } from 'boardgame.io/multiplayer'
+  //     import { Local } from '@lean-poker/boardgame.io/multiplayer'
   //
   // Additionally, you can write your own transport implementation.
   // See `src/client/client.js` for details.

@@ -212,7 +212,7 @@ but don't want them to be in a specific stage. You can use `Stage.NULL`
 for this:
 
 ```js
-import { Stage } from 'boardgame.io/core';
+import { Stage } from '@lean-poker/boardgame.io/core';
 
 // This allows any player to make a move, but doesn't restrict them to
 // a particular stage.
@@ -246,7 +246,7 @@ A number of `activePlayers` configurations are available as presets that you
 can use directly:
 
 ```js
-import { ActivePlayers } from 'boardgame.io/core';
+import { ActivePlayers } from '@lean-poker/boardgame.io/core';
 
 turn: {
   activePlayers: ActivePlayers.ALL;

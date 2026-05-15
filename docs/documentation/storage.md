@@ -18,7 +18,7 @@ npm install node-persist
 Then modify your server spec to indicate that you want to connect to a flatfile database:
 
 ```js
-const { Server, FlatFile } = require('boardgame.io/server');
+const { Server, FlatFile } = require('@lean-poker/boardgame.io/server');
 const { TicTacToe } = require('./game');
 
 const server = Server({

@@ -104,7 +104,7 @@ Then adjust your `server.js` file like this:
 ```js
 // server.js
 
-import { Server } from 'boardgame.io/server';
+import { Server } from '@lean-poker/boardgame.io/server';
 import path from 'path';
 import serve from 'koa-static';
 import { TicTacToe } from './game';
@@ -130,7 +130,7 @@ The [Lobby](/api/Lobby.md) might be as follows:
 
 ```jsx
 import React from 'react';
-import { Lobby } from 'boardgame.io/react';
+import { Lobby } from '@lean-poker/boardgame.io/react';
 import { TicTacToeBoard } from './board';
 import { TicTacToe } from './game';
 
@@ -149,7 +149,7 @@ export default () => (
 Or, without the lobby, pass the server address when calling `SocketIO`:
 
 ```js
-import { SocketIO } from 'boardgame.io/multiplayer';
+import { SocketIO } from '@lean-poker/boardgame.io/multiplayer';
 
 const { protocol, hostname, port } = window.location;
 const server = `${protocol}//${hostname}:${port}`;
@@ -166,7 +166,7 @@ If you only need to publish your backend to Heroku, your `server.js` can be simp
 ```js
 // server.js
 
-import { Server } from 'boardgame.io/server';
+import { Server } from '@lean-poker/boardgame.io/server';
 import { TicTacToe } from './game';
 
 const server = Server({ games: [TicTacToe] });
@@ -178,7 +178,7 @@ server.run(PORT);
 And your [Lobby](/api/Lobby.md) would now be pointing to your Heroku app URL:
 ```jsx
 import React from 'react';
-import { Lobby } from 'boardgame.io/react';
+import { Lobby } from '@lean-poker/boardgame.io/react';
 import { TicTacToeBoard } from './board';
 import { TicTacToe } from './game';
 
@@ -196,7 +196,7 @@ export default () => (
 Or, without the lobby, pass the Heroku app URL when calling `SocketIO`:
 
 ```js
-import { SocketIO } from 'boardgame.io/multiplayer';
+import { SocketIO } from '@lean-poker/boardgame.io/multiplayer';
 
 const GameClient = Client({
   // ...

@@ -62,7 +62,7 @@ G: {
 Usage:
 
 ```js
-import { PlayerView } from 'boardgame.io/core';
+import { PlayerView } from '@lean-poker/boardgame.io/core';
 
 const game = {
   // ...

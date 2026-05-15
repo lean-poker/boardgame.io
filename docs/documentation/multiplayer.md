@@ -34,7 +34,7 @@ The game master can run completely on the browser. This is useful to set
 up pass-and-play multiplayer or for prototyping the multiplayer experience
 without having to set up a server to test it.
 
-To do this `import { Local } from 'boardgame.io/multiplayer'`,
+To do this `import { Local } from '@lean-poker/boardgame.io/multiplayer'`,
 and add `multiplayer: Local()` to the client options.
 Now you can instantiate as many of these clients in your app as you like and
 you will notice that they’re all kept in sync, sharing the same state.
@@ -51,8 +51,8 @@ Then, we’ll update how we create the boardgame.io client, passing
 `playerID` and setting `multiplayer` to use the Local Master.
 
 ```js
-import { Client } from 'boardgame.io/client';
-import { Local } from 'boardgame.io/multiplayer';
+import { Client } from '@lean-poker/boardgame.io/client';
+import { Local } from '@lean-poker/boardgame.io/multiplayer';
 import { TicTacToe } from './Game';
 
 class TicTacToeClient {
@@ -89,8 +89,8 @@ const clients = playerIDs.map(playerID => {
 // src/App.js
 
 import React from 'react';
-import { Client } from 'boardgame.io/react';
-import { Local } from 'boardgame.io/multiplayer';
+import { Client } from '@lean-poker/boardgame.io/react';
+import { Local } from '@lean-poker/boardgame.io/multiplayer';
 import { TicTacToe } from './Game';
 import { TicTacToeBoard } from './Board';
 
@@ -157,7 +157,7 @@ and specify the location of the server.
 #### **Plain JS**
 
 ```js
-import { SocketIO } from 'boardgame.io/multiplayer'
+import { SocketIO } from '@lean-poker/boardgame.io/multiplayer'
 
 class TicTacToeClient {
   constructor(rootElement, { playerID } = {}) {
@@ -190,7 +190,7 @@ update(state) {
 #### **React**
 
 ```js
-import { SocketIO } from 'boardgame.io/multiplayer'
+import { SocketIO } from '@lean-poker/boardgame.io/multiplayer'
 
 const TicTacToeClient = Client({
   game: TicTacToe,
@@ -218,7 +218,7 @@ page to connect.
 
 ```js
 // src/server.js
-const { Server, Origins } = require('boardgame.io/server');
+const { Server, Origins } = require('@lean-poker/boardgame.io/server');
 const { TicTacToe } = require('./Game');
 
 const server = Server({

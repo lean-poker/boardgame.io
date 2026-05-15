@@ -36,7 +36,7 @@ A plugin is an object that contains the following fields.
   // undo the change at the end of the call. 
   // `fnType` gives the type of hook being wrapped
   // and will be one of the `GameMethod` values —
-  // import { GameMethod } from 'boardgame.io/core' 
+  // import { GameMethod } from '@lean-poker/boardgame.io/core' 
   fnWrap: (fn, fnType) => ({ G, ...rest }, ...args) => {
     G = preprocess(G);
     G = fn({ G, ...rest }, ...args);
@@ -71,7 +71,7 @@ A plugin is an object that contains the following fields.
 The list of plugins is specified in the game spec.
 
 ```js
-import { PluginA, PluginB } from 'boardgame.io/plugins';
+import { PluginA, PluginB } from '@lean-poker/boardgame.io/plugins';
 
 const game = {
   name: 'my-game',
@@ -107,7 +107,7 @@ const game = {
 #### PluginPlayer
 
 ```js
-import { PluginPlayer } from 'boardgame.io/plugins';
+import { PluginPlayer } from '@lean-poker/boardgame.io/plugins';
 
 // define a function to initialize each player’s state
 const playerSetup = (playerID) => ({ ... });

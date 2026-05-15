@@ -56,7 +56,7 @@ the user tries to click on an already filled cell in
 Tic-Tac-Toe.
 
 ```js
-import { INVALID_MOVE } from 'boardgame.io/core';
+import { INVALID_MOVE } from '@lean-poker/boardgame.io/core';
 
 moves: {
   clickCell: function({ G, ctx }, id) {

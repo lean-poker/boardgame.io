@@ -174,7 +174,7 @@ In the class’s constructor we’ll create a boardgame.io client
 and call its `start` method to run it.
 
 ```js
-import { Client } from 'boardgame.io/client';
+import { Client } from '@lean-poker/boardgame.io/client';
 import { TicTacToe } from './Game';
 
 class TicTacToeClient {
@@ -215,7 +215,7 @@ npm start
 Replace the contents of `src/App.js` with
 
 ```js
-import { Client } from 'boardgame.io/react';
+import { Client } from '@lean-poker/boardgame.io/react';
 import { TicTacToe } from './Game';
 
 const App = Client({ game: TicTacToe });
@@ -265,7 +265,7 @@ Moves can let the framework know they are invalid by returning a
 special constant which we import into `src/Game.js`:
 
 ```js
-import { INVALID_MOVE } from 'boardgame.io/core';
+import { INVALID_MOVE } from '@lean-poker/boardgame.io/core';
 ```
 
 Now we can return `INVALID_MOVE` from `clickCell`:

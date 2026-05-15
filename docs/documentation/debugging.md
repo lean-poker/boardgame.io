@@ -11,7 +11,7 @@ If you want to include the debug panel in a production build you can
 do so explicitly when creating your client:
 
 ```js
-import { Debug } from 'boardgame.io/debug';
+import { Debug } from '@lean-poker/boardgame.io/debug';
 
 const client = Client({
   // ...

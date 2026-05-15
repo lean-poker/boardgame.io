@@ -29,7 +29,7 @@ you’ll get the correct typing for `G` in your board component.
 
 ```typescript
 // Board.tsx
-import type { BoardProps } from 'boardgame.io/react';
+import type { BoardProps } from '@lean-poker/boardgame.io/react';
 import type { MyGameState } from './Game.ts'
 
 interface MyGameProps extends BoardProps<MyGameState> {
@@ -45,7 +45,7 @@ Read more about [Client](api/Client.md) in the reference. No special typing shou
 
 ```typescript
 // App.tsx
-import { Client } from 'boardgame.io/react';
+import { Client } from '@lean-poker/boardgame.io/react';
 
 import { MyGame } from './Game';
 import { MyGameBoard } from './Board';

@@ -45,7 +45,7 @@ it('should place the correct value in the cell', () => {
 Test your game logic in specific scenarios.
 
 ```js
-import { Client } from 'boardgame.io/client';
+import { Client } from '@lean-poker/boardgame.io/client';
 import { TicTacToe } from './Game';
 
 it('should declare player 1 as the winner', () => {
@@ -92,7 +92,7 @@ Random API’s internal state and you’ll see a predictable sequence of results
 from calls to random API methods:
 
 ```js
-import { Client } from 'boardgame.io/client';
+import { Client } from '@lean-poker/boardgame.io/client';
 
 const Game = {
   moves: {
@@ -119,8 +119,8 @@ If you need to test specific random outcomes, you can override the Random
 API entirely to allow complete control of the results of API methods.
 
 ```js
-import { Client } from 'boardgame.io/client';
-import { MockRandom } from 'boardgame.io/testing';
+import { Client } from '@lean-poker/boardgame.io/client';
+import { MockRandom } from '@lean-poker/boardgame.io/testing';
 
 // Create a mock of the random plugin, where the D6 method always returns 6.
 // Any methods you don’t provide an implementation for will behave as usual.

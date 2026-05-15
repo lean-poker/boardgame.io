@@ -66,7 +66,7 @@ An object that contains:
 #### Basic
 
 ```js
-const { Server, Origins } = require('boardgame.io/server');
+const { Server, Origins } = require('@lean-poker/boardgame.io/server');
 
 const server = Server({
   // Provide the definitions for your game(s).
@@ -116,7 +116,7 @@ boardgame.io `port`.
 #### With HTTPS
 
 ```js
-const { Server } = require('boardgame.io/server');
+const { Server } = require('@lean-poker/boardgame.io/server');
 const fs = require('fs');
 
 const server = Server({
@@ -150,7 +150,7 @@ The `authenticateCredentials` method passed to the `Server` also expects a simil
 
 
 ```js
-const { Server } = require('boardgame.io/server');
+const { Server } = require('@lean-poker/boardgame.io/server');
 
 const generateCredentials = async ctx => {
   const authHeader = ctx.request.headers['authorization'];

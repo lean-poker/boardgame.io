@@ -41,7 +41,7 @@ Changing the game's turn order is accomplished by using the `order`
 option inside the `turn` section of the game config:
 
 ```js
-import { TurnOrder } from 'boardgame.io/core';
+import { TurnOrder } from '@lean-poker/boardgame.io/core';
 
 const game = {
   turn: {

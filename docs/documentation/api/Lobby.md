@@ -26,7 +26,7 @@ using a Lobby API server from the client.
 
 
 ```js
-import { LobbyClient } from 'boardgame.io/client';
+import { LobbyClient } from '@lean-poker/boardgame.io/client';
 
 const lobbyClient = new LobbyClient({ server: 'http://localhost:8000' });
 
@@ -41,7 +41,7 @@ The React lobby component provides a more high-level client, including UI
 for listing, joining, and creating matches.
 
 ```js
-import { Lobby } from 'boardgame.io/react';
+import { Lobby } from '@lean-poker/boardgame.io/react';
 import { TicTacToe } from './Game';
 import { TicTacToeBoard } from './Board';
 

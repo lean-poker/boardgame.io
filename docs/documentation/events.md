@@ -107,7 +107,7 @@ Events are available inside the `events` property of
 a boardgame.io client instance. For example:
 
 ```js
-import { Client } from 'boardgame.io/client';
+import { Client } from '@lean-poker/boardgame.io/client';
 
 const client = Client({ /* options */ });
 
