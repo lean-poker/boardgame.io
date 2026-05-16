@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-import { join } from 'node:path';
+import path from 'node:path';
 import { brotliCompressSync, gzipSync } from 'node:zlib';
 
 const fmt = (bytes) =>
@@ -34,7 +34,7 @@ export default function filesize() {
         const minified = Buffer.byteLength(item.code, 'utf8');
         const gzipped = gzipSync(item.code).length;
         const brotli = brotliCompressSync(item.code).length;
-        const destination = options.file ?? join(options.dir, fileName);
+        const destination = options.file ?? path.join(options.dir, fileName);
 
         if (index > 0) console.log('');
         console.log(`Destination: ${destination}`);
