@@ -1,6 +1,10 @@
 {
   "name": "@lean-poker/boardgame.io",
   "version": "0.50.2",
+  "packageManager": "pnpm@10.16.0",
+  "pnpm": {
+    "onlyBuiltDependencies": []
+  },
   "description": "library for turn-based games",
   "repository": "https://github.com/lean-poker/boardgame.io",
   "scripts": {
@@ -69,7 +73,7 @@
   ],
   "engines": {
     "node": ">=20",
-    "npm": ">=10"
+    "pnpm": ">=10.16"
   },
   "author": "nicolodavis@gmail.com",
   "license": "MIT",
