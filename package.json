@@ -1,6 +1,6 @@
 {
   "name": "@lean-poker/boardgame.io",
-  "version": "0.50.3",
+  "version": "0.50.4",
   "packageManager": "pnpm@10.16.0",
   "pnpm": {
     "onlyBuiltDependencies": []
