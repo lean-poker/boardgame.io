@@ -1,3 +1,42 @@
+### v0.50.4
+
+#### Breaking Changes
+
+* Dropped `koa-socket-2` dependency in favor of native SocketIO v4 APIs. SocketIO now mounts directly on `http.Server` instead of through Koa middleware. This is a temporary state until we complete the separation of transport layer from game logic (see Issue #27).
+
+**SocketIO CORS Signature:**
+
+If you used `origins` as a function, update to the callback signature:
+
+```typescript
+// Before
+const server = Server({
+  origins: (origin) => !!allowOrigin(origin),
+  // ...
+});
+
+// After
+const server = Server({
+  origins: (origin, callback) => {
+    callback(null, !!allowOrigin(origin));
+  },
+  // ...
+});
+```
+
+Or pass an array of allowed origins:
+
+```typescript
+const server = Server({
+  origins: ['http://localhost:5173'],
+  // ...
+});
+```
+
+**Note on Koa Middleware:**
+
+Koa middleware added via `server.app.use()` still works for REST API endpoints but no longer affects SocketIO traffic. If you relied on Koa middleware for WebSocket logging or custom auth, consider implementing those at the SocketIO level or open an issue to discuss your use case.
+
 ### v0.50.2
 
 This release includes dependency upgrades only.
