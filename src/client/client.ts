@@ -141,7 +141,7 @@ export class _ClientImpl<
   G extends any = any,
   PluginAPIs extends Record<string, unknown> = Record<string, unknown>,
 > {
-  private gameStateOverride?: any;
+  private previewStateData?: any;
   private initialState: State<G>;
   readonly multiplayer: (opts: TransportOpts) => Transport;
   private reducer: Reducer;
@@ -191,7 +191,7 @@ export class _ClientImpl<
     this.multiplayer = multiplayer;
     this.debugOpt = debug;
     this.manager = GlobalClientManager;
-    this.gameStateOverride = null;
+    this.previewStateData = null;
     this.subscribers = {};
     this._running = false;
 
@@ -415,9 +415,26 @@ export class _ClientImpl<
     Object.values(this.subscribers).forEach((fn) => fn(this.getState()));
   }
 
-  overrideGameState(state: any) {
-    this.gameStateOverride = state;
+  previewState(state: any) {
+    this.previewStateData = state;
     this.notifySubscribers();
+  }
+
+  /**
+   * Replace the current game state with a saved state and continue playing.
+   * Unlike previewState, this updates the Redux store so that moves,
+   * events, and undo/redo work against the loaded state.
+   * Clears the log since we're starting from a new point in time.
+   */
+  loadState(state: State<G>) {
+    // Clear any active preview
+    this.previewStateData = null;
+
+    // Replace the store state via UPDATE action
+    this.store.dispatch(ActionCreators.update(state, []));
+
+    // Reset the log to prevent stale history
+    this.log = [];
   }
 
   start() {
@@ -454,8 +471,8 @@ export class _ClientImpl<
   getState(): ClientState<G> {
     let state = this.store.getState();
 
-    if (this.gameStateOverride !== null) {
-      state = this.gameStateOverride;
+    if (this.previewStateData !== null && this.previewStateData !== undefined) {
+      state = this.previewStateData;
     }
 
     // This is the state before a sync with the game master.
